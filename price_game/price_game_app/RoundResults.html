@@ -1,0 +1,20 @@
+{{ block title }}
+    Round Results 
+{{ endblock }}
+
+{{ block content }}
+<p>Payoff: {{ player.payoff }}</p>
+
+{% if player.field_maybe_none('set_price') == None %}
+    <p>Your Price: {{ previous_set_price }} (Previous Round)</p>
+{% else %}
+    <p>Your Price: {{ player.set_price }} </p>
+{% endif %}
+
+<p>Lowest Price this round: {{ group.low_price }}</p>
+<p>Possible Round Payoff: {{ group.round_payoff }}</p>
+
+{{ next_button }}
+{{ endblock }}
+
+

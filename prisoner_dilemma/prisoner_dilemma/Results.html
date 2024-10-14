@@ -1,0 +1,12 @@
+{{ block title }}
+    This is the Payoff after the decision:
+{{ endblock }}
+
+{{ block content }}
+    <h1>Result</h1>
+   <p>Your decision: {{ player.decision }} </p> <!--This needs to be player. bc I have not retuned a vars_for_template func-->
+   <p>Your Payoff: {{ player.payout }} </p>
+    {{ next_button }}
+{{ endblock }}
+
+
